@@ -1,0 +1,492 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="icon"
+      href="https://logospng.org/wp-content/uploads/nike.jpg"
+      type="image/png"
+    />
+    <title>Nike</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Montserrat";
+      }
+
+      body {
+        position: relative;
+      }
+
+      /* top menu */
+      nav {
+        /* border: 2px red solid; */
+        text-align: center;
+        width: 100%;
+      }
+
+      nav ul li {
+        display: inline-block;
+        padding: 10px;
+        font-size: 13px;
+        transition: 0.4s;
+        z-index: 1000;
+      }
+
+      nav ul li:hover {
+        font-weight: bold;
+        background: rgb(191, 191, 191);
+        cursor: pointer;
+      }
+
+      /* Main header */
+      .main-header {
+        width: 100%;
+        height: 500px;
+        text-align: center;
+        padding-top: 15%;
+        background:
+          linear-gradient(to bottom, rgb(0, 0, 0, 0.9), rgb(0, 0, 0, 0.2)),
+          url(https://i.pinimg.com/736x/96/6b/4f/966b4f0dc6ed8ef067390c7dbe299f23.jpg)
+            center/cover;
+      }
+
+      .main-contents {
+        color: white;
+      }
+
+      .main-contents button {
+        width: 100px;
+        height: 30px;
+        background: linear-gradient(to left, rgb(0, 187, 90), rgb(0, 197, 232));
+        color: white;
+        font-weight: bold;
+        border-radius: 90px;
+        border: none;
+        margin: 7px;
+        transition: 0.4s;
+        cursor: pointer;
+      }
+
+      .main-contents button:hover {
+        width: 120px;
+      }
+
+      /* Top menu icon */
+      .menu-icon {
+        border: 2px rgb(255, 255, 255) solid;
+        background: white;
+        font-size: 30px;
+        position: fixed;
+        border-radius: 7px;
+        top: 30px;
+        left: 20px;
+      }
+
+      /* Menu bên trái */
+      .left-menu {
+        /* border: 2px rgb(255, 208, 0) solid; */
+
+        position: fixed;
+        background: white;
+        width: 50%;
+        height: 100vh;
+        display: none;
+        position: fixed;
+        z-index: 1000;
+        padding: 20px;
+      }
+
+      .left-menu ul {
+        list-style: none;
+      }
+
+      .left-menu i {
+        font-size: 30px;
+        color: rgb(255, 94, 94);
+      }
+
+      .left-menu li {
+        padding: 10px;
+        font-weight: bold;
+        transition: 0.4s;
+      }
+
+      .left-menu li:hover {
+        transform: translateX(20px);
+        color: rgb(158, 0, 0);
+      }
+
+      .feature {
+        width: 100%;
+        /* border: 3px red solid; */
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        background: linear-gradient(
+          135deg,
+          rgb(171, 12, 12),
+          rgb(239, 135, 135),
+          rgb(171, 12, 12)
+        );
+        color: white;
+      }
+
+      .feature div:hover {
+        transform: scale(1.1);
+        /* opacity: 0.9; */
+      }
+
+      .feature div {
+        text-align: center;
+        padding: 20px;
+        font-size: 13px;
+        border: 1px rgb(0, 0, 0) solid;
+      }
+      .feature div:hover {
+        background-color: rgb(225, 6, 0);
+        cursor: pointer;
+      }
+      .feature h3 {
+        letter-spacing: 5px;
+        color: rgb(0, 0, 0);
+        margin-bottom: 20px;
+      }
+      .title {
+        margin-top: 30px;
+        text-align: center;
+        margin-bottom: 10px;
+        color: rgb(136, 7, 7);
+      }
+      .about {
+        /* border: 2px red solid; */
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .about div:first-child {
+        /* border: 2px rgb(43, 48, 189) solid; */
+        padding: 5px;
+        background: linear-gradient(
+          to left,
+          rgb(228, 75, 75),
+          rgb(246, 142, 142),
+          rgb(175, 17, 17)
+        );
+        border-radius: 10px;
+        overflow: hidden;
+      }
+
+      .about div:last-child {
+        padding: 30px;
+      }
+
+      .about button {
+        background: linear-gradient(
+          to left,
+          rgb(233, 11, 11),
+          rgb(245, 176, 176)
+        );
+        width: 100px;
+        height: 30px;
+        color: white;
+        font-weight: bold;
+        border-radius: 90px;
+        border: none;
+        margin: 7px;
+        transition: 0.4s;
+        cursor: pointer;
+      }
+      .about button:hover {
+        width: 120px;
+      }
+
+      .about img {
+        width: 100%;
+        border-radius: 10px;
+        transition: 0.3s;
+      }
+
+      .about img:hover {
+        transform: scale(1.1, 1.1);
+        transition: 0.3s;
+      }
+
+      /* products */
+      .products {
+        padding: 30px;
+        /* border: 2px red solid; */
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-gap: 20px;
+        background: linear-gradient(
+          to left,
+          rgb(32, 32, 32),
+          rgb(155, 14, 14),
+          rgb(14, 14, 14)
+        );
+      }
+
+      .products div {
+        /* border: 2px rgb(0, 197, 232) solid; */
+        background: white;
+        border-radius: 10px;
+        padding: 10px;
+      }
+
+      .products button {
+        width: 100px;
+        height: 30px;
+        background: linear-gradient(
+          to left,
+          rgb(233, 11, 11),
+          rgb(245, 176, 176)
+        );
+        color: white;
+        font-weight: bold;
+        border-radius: 90px;
+        border: none;
+        margin: 7px;
+        transition: 0.4s;
+        cursor: pointer;
+      }
+
+      .products button:hover {
+        width: 120px;
+      }
+
+      .products img {
+        width: 100%;
+        border-radius: 10px;
+      }
+
+      /* dich vu */
+      .services {
+        /* border: 4px red solid; */
+        padding: 30px;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+      }
+
+      .services div {
+        text-align: center;
+        overflow: hidden;
+        background: linear-gradient(
+          to left,
+          rgb(41, 41, 41),
+          rgb(215, 215, 215)
+        );
+        color: rgb(255, 255, 255);
+        margin: 10px;
+        border-radius: 25px;
+        border: 5px rgb(0, 0, 0) solid;
+      }
+
+      .services img {
+        width: 100%;
+      }
+
+      .services button {
+        width: 100px;
+        height: 30px;
+        background: linear-gradient(to left, rgb(0, 0, 0), rgb(215, 215, 215));
+        color: white;
+        font-weight: bold;
+        border-radius: 90px;
+        border: none;
+        margin: 7px;
+        transition: 0.4s;
+        cursor: pointer;
+      }
+
+      .services button:hover {
+        width: 120px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Menu icon -->
+    <div class="menu-icon">
+      <i class="bx bx-menu open-menu-icon"></i>
+    </div>
+
+    <div class="left-menu">
+      <i class="bx bx-x disable-menu"></i>
+      <ul>
+        <li>FEATURES</li>
+        <li>ABOUT</li>
+        <li>PRODUCTS</li>
+        <li>SERVICES</li>
+        <li>CONTACTS</li>
+      </ul>
+    </div>
+
+    <!-- Top menu -->
+    <nav>
+      <ul>
+        <li>FEATURES</li>
+        <li>ABOUT</li>
+        <li>PRODUCTS</li>
+        <li>SERVICES</li>
+        <li>CONTACTS</li>
+      </ul>
+    </nav>
+    <!-- main header -->
+    <div class="main-header">
+      <div class="main-contents">
+        <p>Unleash Your Potential</p>
+        <h2>LEGENDARY NIKE COLLECTION</h2>
+        <button>Shop Now</button>
+      </div>
+    </div>
+
+    <script>
+      var disableIcon = document.querySelector(".disable-menu");
+      var leftMenu = document.querySelector(".left-menu");
+      var openMenuIcon = document.querySelector(".open-menu-icon");
+
+      disableIcon.addEventListener("click", function () {
+        console.log("ok");
+        leftMenu.style.display = "none";
+      });
+
+      openMenuIcon.addEventListener("click", function () {
+        leftMenu.style.display = "block";
+      });
+    </script>
+    <!-- FEATURES -->
+    <h3 class="title">Feature</h3>
+    <div class="feature">
+      <div>
+        <h3>Title is here</h3>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium
+          repudiandae libero
+        </p>
+      </div>
+      <div>
+        <h3>Title is here</h3>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium
+          repudiandae libero
+        </p>
+      </div>
+      <div>
+        <h3>Title is here</h3>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium
+          repudiandae libero
+        </p>
+      </div>
+      <div>
+        <h3>Title is here</h3>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium
+          repudiandae libero
+        </p>
+      </div>
+    </div>
+    <!-- About -->
+    <h3 class="title">ABOUT</h3>
+    <div class="about">
+      <div>
+        <img
+          src="https://i.pinimg.com/1200x/79/8c/56/798c567d8e2b5f1f4e88717fa7899aaa.jpg"
+          alt=""
+        />
+      </div>
+      <div>
+        <div class="text">
+          <h3>About our</h3>
+          <h3>Title is here</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum
+            laborum, adipisci officia sapiente blanditiis maiores nesciunt
+            consectetur possimus sit voluptatem laudantium ipsam, ab sequi.
+            Nesciunt reiciendis quae minus distinctio veniam?
+          </p>
+          <button>Buy Now</button>
+        </div>
+      </div>
+    </div>
+    <!-- san pham -->
+    <h3 class="title">PRODUCTS</h3>
+    <div class="products">
+      <div>
+        <h5>CHECK OUT</h5>
+        <h3>OUR PRODUCTS</h3>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab,
+          doloremque natus maiores ducimus consectetur dolore quidem obcaecati
+          molestias asperiores quia. Nemo quo autem minus sit harum
+          reprehenderit similique labore dicta.
+        </p>
+        <button>Check out</button>
+      </div>
+
+      <div>
+        <img
+          src="https://i.pinimg.com/1200x/98/16/7e/98167eddc38cd6b15c015fbae8c9ea46.jpg"
+          alt=""
+        />
+        <h4>nike</h4>
+        <h5>99$</h5>
+      </div>
+
+      <div>
+        <img
+          src="https://i.pinimg.com/1200x/98/16/7e/98167eddc38cd6b15c015fbae8c9ea46.jpg"
+          alt=""
+        />
+        <h4>nike</h4>
+        <h5>99$</h5>
+      </div>
+    </div>
+
+    <!-- gioi thieu -->
+    <h3 class="title">SERVICES</h3>
+    <div class="services">
+      <div>
+        <img
+          src="https://i.pinimg.com/1200x/1a/46/a8/1a46a80045ea944fda83a3b69648a8a1.jpg"
+          alt=""
+        />
+        <h4>NIKE</h4>
+
+        <button>Read more</button>
+      </div>
+
+      <div>
+        <img
+          src="https://i.pinimg.com/1200x/1a/46/a8/1a46a80045ea944fda83a3b69648a8a1.jpg"
+          alt=""
+        />
+        <h4>NIKE</h4>
+
+        <button>Read more</button>
+      </div>
+
+      <div>
+        <img
+          src="https://i.pinimg.com/1200x/1a/46/a8/1a46a80045ea944fda83a3b69648a8a1.jpg"
+          alt=""
+        />
+        <h4>NIKE</h4>
+
+        <button>Read more</button>
+      </div>
+    </div>
+  </body>
+</html>
