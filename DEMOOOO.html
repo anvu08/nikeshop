@@ -1,0 +1,273 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Montserrat";
+      }
+
+      body {
+        position: relative;
+      }
+      /* top menu */
+      nav {
+        text-align: center;
+        width: 100%;
+      }
+      nav ul li {
+        display: inline-block;
+        padding: 10px;
+        font-size: 13px;
+        transition: 0.4s;
+      }
+      nav ul li:hover {
+        font-weight: bold;
+        background: rgb(206, 206, 206);
+        cursor: pointer;
+      }
+
+      /* banner */
+      .banner {
+        position: relative;
+      }
+      .banner img {
+        width: 100%;
+        display: block;
+      }
+      .banner:hover {
+        cursor: pointer;
+      }
+      /* feaature */
+      .feature {
+        width: 100%;
+        border: 3px red solid;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        color: black;
+      }
+      .feature div {
+        text-align: center;
+        padding: 20px;
+        font-size: 13px;
+        border: 1px black solid;
+      }
+      .feature div:hover {
+        background-color: rgb(204, 204, 204);
+        cursor: pointer;
+      }
+      .feature h3 {
+        letter-spacing: 5px;
+        color: rgb(0, 0, 0);
+        margin-bottom: 20px;
+      }
+
+      .title {
+        margin-top: 30px;
+        text-align: center;
+        margin-bottom: 10px;
+        color: rgb(0, 0, 0);
+      }
+      /* about */
+      .about {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+      }
+      .about div:first-child {
+        padding: 5px;
+        background: linear-gradient(
+          to left,
+          rgb(228, 75, 75),
+          rgb(246, 142, 142),
+          rgb(175, 17, 17)
+        );
+        border-radius: 10px;
+        overflow: hidden;
+      }
+      .about div:last-child {
+        padding: 30px;
+      }
+      .about button {
+        background: linear-gradient(
+          to left,
+          rgb(233, 11, 11),
+          rgb(245, 176, 176)
+        );
+        width: 100px;
+        height: 30px;
+        color: white;
+        font-weight: bold;
+        border-radius: 90px;
+        border: none;
+        margin: 7px;
+        transition: 0.4s;
+        cursor: pointer;
+      }
+      .about button:hover {
+        width: 120px;
+      }
+      .about img {
+        width: 100%;
+        border-radius: 10px;
+        transition: 0.3s;
+      }
+      .about img:hover {
+        transform: scale(1.1, 1.1);
+        transition: 0.3s;
+      }
+      .product {
+        padding: 20px;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-gap: 20px;
+        background: linear-gradient(
+          to left,
+          rgb(197, 197, 197),
+          rgb(171, 7, 7),
+          rgb(177, 177, 177)
+        );
+      }
+      .product div {
+        background-color: white;
+        border-radius: 10px;
+        padding: 10px;
+      }
+      .product button {
+        width: 100px;
+        height: 30px;
+        background: linear-gradient(
+          to left,
+          rgb(233, 11, 11),
+          rgb(245, 176, 176)
+        );
+        cursor: pointer;
+        color: white;
+        font-weight: bold;
+        border-radius: 90px;
+        border: none;
+        margin: 7px;
+        transition: 0.4s;
+      }
+      .product button:hover {
+        width: 120px;
+      }
+      .product img {
+        width: 100%;
+        border-radius: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- menu -->
+    <nav>
+      <ul class="menu">
+        <li>FEATURES</li>
+        <li>ABOUT</li>
+        <li>
+          PRODUCTS
+          <ul class="submenu">
+            <li>Shoes</li>
+            <li>T Sweatshirt</li>
+          </ul>
+        </li>
+        <li>SERVICES</li>
+        <li>CONTACTS</li>
+      </ul>
+    </nav>
+    <div class="banner">
+      <img src="img/banner.jpg" alt="Banner" />
+    </div>
+    <!-- feature -->
+    <h3 class="title">FEATURES</h3>
+    <div class="feature">
+      <div>
+        <h3>Title is here</h3>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium
+          repudiandae libero
+        </p>
+      </div>
+      <div>
+        <h3>Title is here</h3>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium
+          repudiandae libero
+        </p>
+      </div>
+      <div>
+        <h3>Title is here</h3>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium
+          repudiandae libero
+        </p>
+      </div>
+      <div>
+        <h3>Title is here</h3>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium
+          repudiandae libero
+        </p>
+      </div>
+    </div>
+    <!-- ABOUT -->
+    <h3 class="title">ABOUT</h3>
+    <div class="about">
+      <div>
+        <img
+          src="https://i.pinimg.com/1200x/79/8c/56/798c567d8e2b5f1f4e88717fa7899aaa.jpg"
+        />
+      </div>
+
+      <div>
+        <div class="text">
+          <h3>About our</h3>
+          <h3>Title is here</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum
+            laborum, adipisci officia sapiente blanditiis maiores nesciunt
+            consectetur possimus sit voluptatem laudantium ipsam, ab sequi.
+            Nesciunt reiciendis quae minus distinctio veniam?
+          </p>
+          <button>Buy Now</button>
+        </div>
+      </div>
+    </div>
+    <!-- product -->
+    <h3 class="title">PRODUCTS</h3>
+    <div class="product">
+      <div>
+        <h5>CHECK OUT</h5>
+        <h3>OUR PRODUCTS</h3>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab,
+          doloremque natus maiores ducimus consectetur dolore quidem obcaecati
+          molestias asperiores quia. Nemo quo autem minus sit harum
+          reprehenderit similique labore dicta.
+        </p>
+        <button>Check out</button>
+      </div>
+
+      <div>
+        <img
+          src="https://i.pinimg.com/736x/e8/cf/0b/e8cf0b9ac602584dc927ba71564d05d5.jpg"
+          alt="giay"
+        />
+        <h4>NiKe</h4>
+        <h5>100$</h5>
+      </div>
+      <div>
+        <img
+          src="https://i.pinimg.com/736x/e8/cf/0b/e8cf0b9ac602584dc927ba71564d05d5.jpg"
+          alt="giay"
+        />
+        <h4>NiKe</h4>
+        <h5>100$</h5>
+      </div>
+    </div>
+  </body>
+</html>
